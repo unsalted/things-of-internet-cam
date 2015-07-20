@@ -1,0 +1,23 @@
+{
+  "name": "cam",
+  "main": "index.js",
+  "version": "0.0.1",
+  "authors": [
+    "Unsalted <nick@unsalted.nu>"
+  ],
+  "description": "ffmpeg webcam uploader",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "inconsolata": "~0.0.1"
+  }
+}
