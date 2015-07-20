@@ -4,9 +4,6 @@ node_modules
 config/development.js
 *.mp4
 *.jpg
-archive/mp4/*
-archive/jpg/201507191019-studio.jpg
-archive/jpg/201507191029-studio.jpg
-archive/jpg/201507191039-studio.jpg
-archive/jpg/201507191049-studio.jpg
-archive/jpg/201507191059-studio.jpg
+archive/mp4/*.mp4
+archive/jpg/*.jpg
+
