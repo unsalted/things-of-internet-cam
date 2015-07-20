@@ -7,12 +7,12 @@ exports.record = function(params, callback){
 
   // these were specific to my use.
 
-  var hh = moment().format('hh');
-  var mm = moment().format('mm');
-  var ss = moment().format('ss');
-  var SS = moment().format('SS');
+  var hh = moment().format('hh'); // current timecode
+  var mm = moment().format('mm'); 
+  var ss = moment().format('ss'); 
+  var SS = moment().format('SS'); 
 
-  var tc =
+  var tc =          //timecode
   "drawtext=fontcolor="+params.text.color+": \
   fontsize="+params.text.font_size+": \
   fontfile="+params.text.font_file+": \
@@ -22,39 +22,39 @@ exports.record = function(params, callback){
  
 
   var ffmpeg = require('child_process').spawn('ffmpeg', [
-  '-y',                     //overwrite file
-  '-f',                     //force format
-  params.camera_framework,           //camera framework
-  '-i',
-  params.input_device,         //input device
-  '-s',
-  '1280x720',
-  '-r',                     //framerate
-  params.frame_rate,                     //seconds
-  '-pix_fmt',
-  'yuv422p',                //yuv 422p input 
-  '-b:v',                   //variable bitrate
-  params.bitrate,
-  '-maxrate',               //max bitrate               
-  params.max_bitrate,
-  '-codec:v',
-  'libx264',                //h264 codec
-  '-threads',               //Use all cores
-  '0', 
-  '-profile:',              //codec profile
-  'high422',
-  '-preset',                //encoding speed/quality
-  params.encoding_speed,
-  '-pix_fmt',               //convert back to a legacy format to play in most players
-  'yuv420p',
-  '-vf',                    //output video format
-  'scale=-1:720',           //scale down
+  '-y',                             //overwrite file
+  '-f',                             //force format
+  params.camera_framework,          //camera framework
+  '-i',       
+  params.input_device,              //input device
+  '-s',       
+  '1280x720',       
+  '-r',                             //framerate
+  params.frame_rate,                //seconds
+  '-pix_fmt',       
+  'yuv422p',                        //yuv 422p input 
+  '-b:v',                           //variable bitrate
+  params.bitrate,       
+  '-maxrate',                       //max bitrate               
+  params.max_bitrate,       
+  '-codec:v',       
+  'libx264',                        //h264 codec
+  '-threads',                       //Use all cores
+  '0',        
+  '-profile:',                      //codec profile
+  'high422',        
+  '-preset',                        //encoding speed/quality
+  params.encoding_speed,        
+  '-pix_fmt',                       //convert back to a legacy format to play in most players
+  'yuv420p',        
+  '-vf',                            //output video format
+  'scale=-1:720',                   //scale down
   '-vf',
   tc,
-  '-an',                    //no audio
-  '-t',                     //time
-  params.duration,                      //seconds
-  params.temp_dir+params.temp_name          //output directory + time based name
+  '-an',                            //no audio
+  '-t',                             //time
+  params.duration,                  //seconds
+  params.temp_dir+params.temp_name  //output directory + time based file name
   ]);
 
 

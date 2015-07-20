@@ -9,10 +9,8 @@
   "author": "Unsalted",
   "license": "MIT",
   "dependencies": {
-    "aws-sdk": "^2.1.39",
     "lodash": "^3.10.0",
     "moment": "^2.10.3",
-    "s3fs": "^2.0.1",
-    "vimeo-client": "^0.2.0"
+    "s3fs": "^2.0.1"
   }
 }
