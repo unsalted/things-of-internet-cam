@@ -3,9 +3,10 @@ bower_components
 node_modules
 config/development.js
 *.mp4
+*.jpg
 archive/mp4/*
-archive/mp4/201507191019-studio.mp4
-archive/mp4/201507191029-studio.mp4
-archive/mp4/201507191039-studio.mp4
-archive/mp4/201507191049-studio.mp4
-archive/mp4/201507191059-studio.mp4
+archive/jpg/201507191019-studio.jpg
+archive/jpg/201507191029-studio.jpg
+archive/jpg/201507191039-studio.jpg
+archive/jpg/201507191049-studio.jpg
+archive/jpg/201507191059-studio.jpg
